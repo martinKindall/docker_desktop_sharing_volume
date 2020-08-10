@@ -1,0 +1,14 @@
+version: "3.5"
+services:
+  web-fe:
+    build: .
+    ports:
+      - target: 9000
+        published: 5000
+    networks:
+      - counter-net
+    volumes:
+      - c:/docker_shared/nginx_volume:/src
+
+networks:
+  counter-net:
